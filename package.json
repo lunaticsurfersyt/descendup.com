@@ -1,0 +1,40 @@
+{
+  "name": "descendup-dashboard",
+  "version": "1.0.0",
+  "description": "DescendUp Creator Dashboard - Fast and efficient web application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "serve": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "dashboard",
+    "creator",
+    "content",
+    "seo",
+    "analytics"
+  ],
+  "author": "DescendUp Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/descendup/dashboard.git"
+  },
+  "homepage": "https://descendup.com",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

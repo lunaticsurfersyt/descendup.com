@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DescendUp - Creator Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h1 id="headerText">DescendUp</h1>
+            <button id="closeSidebar" class="close-btn"></button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" data-page="home" class="nav-item active">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Home
+            </a>
+            <a href="#" data-page="studio" class="nav-item">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.6 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                AI Studio
+            </a>
+            <a href="#" data-page="blogs" class="nav-item">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                Blogs
+            </a>
+            <a href="#" data-page="services" class="nav-item">
+                <svg class="nav-icon" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                Our Services
+            </a>
+            <a href="#" data-page="profile" class="nav-item">
+                <svg class="nav-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+                Profile
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <button id="menuBtn" class="menu-btn">☰</button>
+            <h2 id="pageTitle">Home</h2>
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <img src="https://placehold.co/32x32/E2E8F0/4A5568?text=U" alt="User" class="user-avatar">
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <main id="pageContent" class="page-content">
+            <!-- Home Page -->
+            <div id="homePage" class="page active">
+                <div class="hero-section">
+                    <h1>Grow Your Content. Earn More.</h1>
+                    <h2>We Handle the Rest.</h2>
+                    <p>We optimize your content with data-driven SEO, thumbnails, and insights—so you focus on creating.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" data-page="studio">Get Started Free</button>
+                        <button class="btn-secondary" data-page="services">See How It Works</button>
+                    </div>
+                </div>
+                <div class="subscriber-count">
+                    <p class="count-label">LIVE SUBSCRIBER COUNT</p>
+                    <p id="subscriberCount" class="count-number">150,321</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Connect Your Channel</h3>
+                        <p>Securely link your YouTube account in seconds.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>We Optimize</h3>
+                        <p>Get tailored SEO, thumbnails, and insights.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>You Grow</h3>
+                        <p>Watch your revenue and engagement climb.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Studio Page -->
+            <div id="studioPage" class="page">
+                <div class="page-header">
+                    <h2>Channel content</h2>
+                    <button class="btn-create">Create</button>
+                </div>
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Video</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Views</th>
+                                <th>SEO Preview</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentTableBody">
+                            <!-- Content will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Services Page -->
+            <div id="servicesPage" class="page">
+                <div class="services-container">
+                    <h1>Choose your Premium plan</h1>
+                    <div class="plan-toggle">
+                        <button class="toggle-btn active" data-type="individual">Individual</button>
+                        <button class="toggle-btn" data-type="organization">Organization</button>
+                    </div>
+                    <div class="plans-grid">
+                        <div class="plan-card">
+                            <h2>Starter</h2>
+                            <p class="plan-desc">For creators getting started</p>
+                            <div class="plan-price">Free <span>15% commission</span></div>
+                            <ul class="plan-features">
+                                <li>✓ Limited SEO reports</li>
+                                <li>✓ Standard analytics</li>
+                                <li>✓ Basic support</li>
+                            </ul>
+                            <button class="plan-btn current" disabled>Current Plan</button>
+                        </div>
+                        <div class="plan-card">
+                            <h2>Pro</h2>
+                            <p class="plan-desc">For creators ready to scale</p>
+                            <div class="plan-price">A$75/mo <span>+ 8% commission</span></div>
+                            <ul class="plan-features">
+                                <li>✓ Full optimization tools</li>
+                                <li>✓ Advanced SEO features</li>
+                                <li>✓ Priority support</li>
+                                <li>✓ AI content suggestions</li>
+                            </ul>
+                            <button class="plan-btn">Subscribe</button>
+                        </div>
+                        <div class="plan-card">
+                            <h2>Elite</h2>
+                            <p class="plan-desc">For established creators and brands</p>
+                            <div class="plan-price">A$150/mo <span>+ 5% commission</span></div>
+                            <ul class="plan-features">
+                                <li>✓ All Pro features</li>
+                                <li>✓ Dedicated account manager</li>
+                                <li>✓ Brand deal insights</li>
+                                <li>✓ Early access to new features</li>
+                            </ul>
+                            <button class="plan-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Page -->
+            <div id="profilePage" class="page">
+                <div class="profile-header">
+                    <div class="profile-cover"></div>
+                    <div class="profile-info">
+                        <img src="https://placehold.co/160x160/232526/FFFFFF?text=P" alt="Profile" class="profile-avatar">
+                        <div class="profile-details">
+                            <h1>Creator Pro</h1>
+                            <p>150k Subscribers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-intro">
+                        <h3>Intro</h3>
+                        <p>Tech creator with 150k subs, focused on gadgets and reviews.</p>
+                        <ul>
+                            <li>Niche: Tech</li>
+                            <li>Location: India</li>
+                            <li>Joined: August 2025</li>
+                        </ul>
+                    </div>
+                    <div class="profile-activity">
+                        <h3>Activity Feed</h3>
+                        <p>Recent optimizations and suggestions will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blogs Page -->
+            <div id="blogsPage" class="page">
+                <div class="blogs-container">
+                    <div class="blog-post">
+                        <div class="post-header">
+                            <img src="https://placehold.co/48x48/EE0979/FFFFFF?text=D" alt="Creator Insights" class="post-avatar">
+                            <div class="post-info">
+                                <h3 class="post-author">Creator Insights</h3>
+                                <p class="post-username">@descendup_official</p>
+                            </div>
+                        </div>
+                        <p class="post-content">Welcome to the new creator space! We're excited to share tips, tricks, and success stories to help you grow. What's the first thing you want to learn about?</p>
+                        <div class="post-actions">
+                            <span>18 replies</span>
+                            <span>152 likes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <div class="post-header">
+                            <img src="https://placehold.co/48x48/232526/FFFFFF?text=T" alt="Tech Creator Pro" class="post-avatar">
+                            <div class="post-info">
+                                <h3 class="post-author">Tech Creator Pro</h3>
+                                <p class="post-username">@techpro</p>
+                            </div>
+                        </div>
+                        <p class="post-content">Just used the AI Studio's SEO preview for my latest video. The potential growth metric is a game-changer for planning content. Seeing a potential +45% view increase is incredibly motivating. #CreatorTools #SEO</p>
+                        <div class="post-actions">
+                            <span>12 replies</span>
+                            <span>89 likes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-post">
+                        <div class="post-header">
+                            <img src="https://placehold.co/48x48/EE0979/FFFFFF?text=D" alt="Creator Insights" class="post-avatar">
+                            <div class="post-info">
+                                <h3 class="post-author">Creator Insights</h3>
+                                <p class="post-username">@descendup_official</p>
+                            </div>
+                        </div>
+                        <p class="post-content">Quick Tip: Your thumbnail is your video's billboard. Make sure the text is readable on mobile and the visuals are compelling. A/B testing can reveal surprising results!</p>
+                        <div class="post-actions">
+                            <span>25 replies</span>
+                            <span>230 likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>/div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
