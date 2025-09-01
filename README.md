@@ -1,4 +1,4 @@
-Hi Guys!! This is me, Sagnik
+Hi Guys!! This is me, Sagnik.
 I came up with this plan to help fuel the creators' economy
 Descendup.com is basically designed to help creators grow their content in an attempt to reach their audience
 The problems we are trying to address:
